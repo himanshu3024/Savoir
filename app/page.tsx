@@ -165,8 +165,7 @@ export default function HomePage() {
         {floatingProducts.map((product, index) => (
           <div
             key={product.id}
-            className={`absolute ${product.position} hidden lg:block animate-bounce`}
-            style={{ animationDelay: `${index * 0.5}s`, animationDuration: "3s" }}
+            className={`absolute ${product.position} hidden lg:block animate-bounce floating-product-${index}`}
           >
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-3 hover:scale-110 transition-transform duration-300">
               <div className="flex items-center space-x-3">
