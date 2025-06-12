@@ -265,18 +265,4 @@ npm start
 6. **Accessibility**: WCAG compliant and inclusive
 7. **Production Ready**: Complete with API, database, and deployment configs
 
-## 📞 Support
 
-For questions or support, please contact:
-- Email: support@savoir.com
-- Documentation: [Project Wiki]
-- Issues: [GitHub Issues]
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-**SAVOIR** - Where luxury meets technology. Built with ❤️ for the modern web.
-\`\`\`
