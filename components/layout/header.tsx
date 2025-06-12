@@ -13,11 +13,18 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Search, ShoppingCart, User, Heart, Menu, X } from "lucide-react"
 import Link from "next/link"
+<<<<<<< HEAD
 import { useCart } from "@/contexts/cart-context"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { state: cartState } = useCart()
+=======
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [cartItemCount] = useState(3) // Mock cart count
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -78,9 +85,15 @@ export default function Header() {
             <Button asChild variant="ghost" size="sm" className="relative">
               <Link href="/cart">
                 <ShoppingCart className="h-5 w-5" />
+<<<<<<< HEAD
                 {cartState.itemCount > 0 && (
                   <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-purple-600">
                     {cartState.itemCount}
+=======
+                {cartItemCount > 0 && (
+                  <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-purple-600">
+                    {cartItemCount}
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                   </Badge>
                 )}
               </Link>

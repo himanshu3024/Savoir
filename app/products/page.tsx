@@ -8,11 +8,19 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
+<<<<<<< HEAD
 import { Star, Search, Filter, Grid, List, Eye, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 import QuickViewModal from "@/components/quick-view-modal"
 import WishlistButton from "@/components/wishlist-button"
 import { useCart } from "@/contexts/cart-context"
+=======
+import { Star, Search, Filter, Grid, List, Eye } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import QuickViewModal from "@/components/quick-view-modal"
+import WishlistButton from "@/components/wishlist-button"
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
 
 export default function ProductsPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -21,86 +29,131 @@ export default function ProductsPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [priceRange, setPriceRange] = useState<string>("")
 
+<<<<<<< HEAD
   const { addToCart } = useCart()
 
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   const products = [
     {
       id: 1,
       name: "Premium Wireless Headphones",
       price: 299.99,
       originalPrice: 399.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1704440278730-b420f5892700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJlbWl1bSUyMHdpcmVsZXNzJTIwaGVhZHBob25lc3xlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.8,
       reviews: 2847,
       category: "Electronics",
       badge: "Best Seller",
       description: "High-quality wireless headphones with noise cancellation",
+<<<<<<< HEAD
       inStock: true,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
     {
       id: 2,
       name: "Smart Fitness Watch",
       price: 249.99,
       originalPrice: 329.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1629339837617-7069ce9e7f6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBmaXRuZXNzJTIwd2F0Y2h8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.9,
       reviews: 1923,
       category: "Electronics",
       badge: "New",
       description: "Advanced fitness tracking with heart rate monitoring",
+<<<<<<< HEAD
       inStock: true,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
     {
       id: 3,
       name: "Professional Camera Lens",
       price: 899.99,
       originalPrice: 1199.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1565193079400-18f2482dd197?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwY2FtZXJhJTIwbGVuc3xlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.7,
       reviews: 856,
       category: "Photography",
       badge: "Limited",
       description: "Professional-grade camera lens for stunning photography",
+<<<<<<< HEAD
       inStock: true,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
     {
       id: 4,
       name: "Luxury Leather Wallet",
       price: 129.99,
       originalPrice: 179.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1677326768050-7d437347ca70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGx1eHVyeSUyMGxlYXRoZXIlMjB3YWxsZXR8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.6,
       reviews: 1245,
       category: "Accessories",
       badge: "",
       description: "Handcrafted leather wallet with RFID protection",
+<<<<<<< HEAD
       inStock: false,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
     {
       id: 5,
       name: "Ergonomic Office Chair",
       price: 449.99,
       originalPrice: 599.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1603376575925-467d14313a60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXJvZ29ub21pYyUyMG9mZmljZSUyMGNoYWlyfGVufDB8fDB8fHwy",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.8,
       reviews: 967,
       category: "Furniture",
       badge: "Popular",
       description: "Ergonomic design for maximum comfort and productivity",
+<<<<<<< HEAD
       inStock: true,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
     {
       id: 6,
       name: "Wireless Charging Pad",
       price: 79.99,
       originalPrice: 99.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1588438761428-9451c893df20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lyZWxlc3MlMjBjaGFyZ2luZyUyMHBhZHxlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.5,
       reviews: 1567,
       category: "Electronics",
       badge: "",
       description: "Fast wireless charging for all compatible devices",
+<<<<<<< HEAD
       inStock: true,
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     },
   ]
 
@@ -114,6 +167,7 @@ export default function ProductsPage() {
     }
   }
 
+<<<<<<< HEAD
   const handleAddToCart = (product: any) => {
     addToCart({
       id: product.id,
@@ -125,6 +179,8 @@ export default function ProductsPage() {
     })
   }
 
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   const filteredProducts = useMemo(() => {
     return products
       .filter((product) => {
@@ -295,11 +351,14 @@ export default function ProductsPage() {
                           {product.badge}
                         </Badge>
                       )}
+<<<<<<< HEAD
                       {!product.inStock && (
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                           <Badge variant="destructive">Out of Stock</Badge>
                         </div>
                       )}
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                     </div>
 
                     <CardContent className={`p-6 ${viewMode === "list" ? "flex-1" : ""}`}>
@@ -328,17 +387,26 @@ export default function ProductsPage() {
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <span className="text-2xl font-bold text-gray-900">${product.price}</span>
+<<<<<<< HEAD
                           {product.originalPrice && product.originalPrice > product.price && (
                             <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
                           )}
                         </div>
                         {product.originalPrice && product.originalPrice > product.price && (
+=======
+                          {product.originalPrice > product.price && (
+                            <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
+                          )}
+                        </div>
+                        {product.originalPrice > product.price && (
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                           <Badge variant="secondary" className="bg-green-100 text-green-800">
                             Save ${(product.originalPrice - product.price).toFixed(2)}
                           </Badge>
                         )}
                       </div>
 
+<<<<<<< HEAD
                       <div className="flex items-center justify-between space-x-2">
                         <Button
                           onClick={() => handleAddToCart(product)}
@@ -349,11 +417,38 @@ export default function ProductsPage() {
                           {product.inStock ? "Add to Cart" : "Out of Stock"}
                         </Button>
                         <QuickViewModal product={product}>
+=======
+                      <div className="flex items-center justify-between">
+                        <Button
+                          asChild
+                          className="flex-1 mr-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                        >
+                          <Link href={`/products/${product.id}`}>View Details</Link>
+                        </Button>
+                        <QuickViewModal
+                          product={{
+                            id: product.id,
+                            name: product.name,
+                            price: product.price,
+                            originalPrice: product.originalPrice,
+                            image: product.image,
+                            rating: product.rating,
+                            reviews: product.reviews,
+                            description: product.description,
+                            badge: product.badge,
+                            inStock: true,
+                          }}
+                        >
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                           <Button variant="outline" size="sm">
                             <Eye className="h-4 w-4" />
                           </Button>
                         </QuickViewModal>
+<<<<<<< HEAD
                         <WishlistButton product={product} />
+=======
+                        <WishlistButton productId={product.id} />
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                       </div>
                     </CardContent>
                   </div>

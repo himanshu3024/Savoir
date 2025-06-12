@@ -17,7 +17,11 @@ export default function CategoriesPage() {
       name: "Electronics",
       description: "Latest gadgets and electronic devices",
       productCount: 156,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZWxlY3Ryb25pY3N8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Smartphone,
       color: "from-blue-500 to-purple-600",
       featured: true,
@@ -27,7 +31,11 @@ export default function CategoriesPage() {
       name: "Audio & Headphones",
       description: "Premium sound experience",
       productCount: 89,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1658927420987-488ade098001?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXVkaW8lMjBhbmQlMjBoZWFkcGhvbmVzfGVufDB8fDB8fHwy",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Headphones,
       color: "from-purple-500 to-pink-600",
       featured: true,
@@ -37,7 +45,11 @@ export default function CategoriesPage() {
       name: "Photography",
       description: "Professional cameras and accessories",
       productCount: 67,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Camera,
       color: "from-green-500 to-teal-600",
       featured: false,
@@ -47,7 +59,11 @@ export default function CategoriesPage() {
       name: "Wearables",
       description: "Smart watches and fitness trackers",
       productCount: 45,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1596236100223-f3c656de3038?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VhcmFibGVzfGVufDB8fDB8fHwy",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Watch,
       color: "from-orange-500 to-red-600",
       featured: true,
@@ -57,7 +73,11 @@ export default function CategoriesPage() {
       name: "Gaming",
       description: "Gaming accessories and peripherals",
       productCount: 78,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdhbWluZ3xlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Gamepad2,
       color: "from-indigo-500 to-blue-600",
       featured: false,
@@ -67,7 +87,11 @@ export default function CategoriesPage() {
       name: "Computers",
       description: "Laptops, desktops and accessories",
       productCount: 123,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1558267535-896c0f00b67b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=600",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       icon: Laptop,
       color: "from-gray-600 to-gray-800",
       featured: false,

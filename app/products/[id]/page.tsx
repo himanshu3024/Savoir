@@ -57,21 +57,33 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
       id: 2,
       name: "Smart Fitness Watch",
       price: 249.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1629339837617-7069ce9e7f6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBmaXRuZXNzJTIwd2F0Y2h8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=300&width=300",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.9,
     },
     {
       id: 6,
       name: "Wireless Charging Pad",
       price: 79.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1588438761428-9451c893df20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lyZWxlc3MlMjBjaGFyZ2luZyUyMHBhZHxlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=300&width=300",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.5,
     },
     {
       id: 4,
       name: "Luxury Leather Wallet",
       price: 129.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1677326768050-7d437347ca70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGx1eHVyeSUyMGxlYXRoZXIlMjB3YWxsZXR8ZW58MHx8MHx8fDI%3D",
+=======
+      image: "/placeholder.svg?height=300&width=300",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.6,
     },
   ]
@@ -79,27 +91,45 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   const reviews = [
     {
       id: 1,
+<<<<<<< HEAD
       name: "Harsh Shah",
       rating: 5,
       date: "2025-01-15",
+=======
+      name: "Sarah Johnson",
+      rating: 5,
+      date: "2024-01-15",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       comment:
         "Absolutely amazing sound quality! The noise cancellation is incredible and the battery life exceeds expectations.",
       verified: true,
     },
     {
       id: 2,
+<<<<<<< HEAD
       name: "Manish Jetwani",
       rating: 4,
       date: "2025-01-10",
+=======
+      name: "Mike Chen",
+      rating: 4,
+      date: "2024-01-10",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       comment:
         "Great headphones overall. Very comfortable for long listening sessions. The build quality is excellent.",
       verified: true,
     },
     {
       id: 3,
+<<<<<<< HEAD
       name: "Samarth Jetwani",
       rating: 5,
       date: "2025-01-05",
+=======
+      name: "Emily Davis",
+      rating: 5,
+      date: "2024-01-05",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       comment: "Best purchase I've made this year! The sound is crystal clear and the design is beautiful.",
       verified: true,
     },

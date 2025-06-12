@@ -1,5 +1,6 @@
 "use client"
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -19,10 +20,20 @@ interface WishlistButtonProps {
     description: string
     inStock: boolean
   }
+=======
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Heart } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+interface WishlistButtonProps {
+  productId: number
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   className?: string
   size?: "sm" | "default" | "lg"
 }
 
+<<<<<<< HEAD
 export default function WishlistButton({ product, className, size = "default" }: WishlistButtonProps) {
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
   const isWishlisted = isInWishlist(product.id)
@@ -33,6 +44,20 @@ export default function WishlistButton({ product, className, size = "default" }:
     } else {
       addToWishlist(product)
     }
+=======
+export default function WishlistButton({ productId, className, size = "default" }: WishlistButtonProps) {
+  const [isWishlisted, setIsWishlisted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const toggleWishlist = async () => {
+    setIsLoading(true)
+
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 500))
+
+    setIsWishlisted(!isWishlisted)
+    setIsLoading(false)
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   }
 
   return (
@@ -40,6 +65,10 @@ export default function WishlistButton({ product, className, size = "default" }:
       variant="ghost"
       size={size}
       onClick={toggleWishlist}
+<<<<<<< HEAD
+=======
+      disabled={isLoading}
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       className={cn(
         "transition-all duration-300",
         isWishlisted ? "text-red-500 hover:text-red-600" : "text-gray-400 hover:text-red-500",

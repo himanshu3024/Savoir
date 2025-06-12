@@ -1,5 +1,9 @@
 "use client"
 
+<<<<<<< HEAD
+=======
+import { useState } from "react"
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,6 +12,7 @@ import { Separator } from "@/components/ui/separator"
 import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, CreditCard } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+<<<<<<< HEAD
 import { useCart } from "@/contexts/cart-context"
 import { useState } from "react"
 
@@ -16,6 +21,57 @@ export default function CartPage() {
   const [promoCode, setPromoCode] = useState("")
   const [appliedPromo, setAppliedPromo] = useState<string | null>(null)
 
+=======
+
+export default function CartPage() {
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: "Premium Wireless Headphones",
+      price: 299.99,
+      originalPrice: 399.99,
+      image: "/placeholder.svg?height=200&width=200",
+      quantity: 1,
+      inStock: true,
+    },
+    {
+      id: 2,
+      name: "Smart Fitness Watch",
+      price: 249.99,
+      originalPrice: 329.99,
+      image: "/placeholder.svg?height=200&width=200",
+      quantity: 2,
+      inStock: true,
+    },
+    {
+      id: 6,
+      name: "Wireless Charging Pad",
+      price: 79.99,
+      originalPrice: 99.99,
+      image: "/placeholder.svg?height=200&width=200",
+      quantity: 1,
+      inStock: false,
+    },
+  ])
+
+  const [promoCode, setPromoCode] = useState("")
+  const [appliedPromo, setAppliedPromo] = useState<string | null>(null)
+
+  const updateQuantity = (id: number, newQuantity: number) => {
+    if (newQuantity === 0) {
+      removeItem(id)
+      return
+    }
+    setCartItems((items) =>
+      items.map((item) => (item.id === id ? { ...item, quantity: Math.max(1, newQuantity) } : item)),
+    )
+  }
+
+  const removeItem = (id: number) => {
+    setCartItems((items) => items.filter((item) => item.id !== id))
+  }
+
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   const applyPromoCode = () => {
     if (promoCode.toLowerCase() === "save10") {
       setAppliedPromo("SAVE10")
@@ -23,17 +79,26 @@ export default function CartPage() {
     }
   }
 
+<<<<<<< HEAD
   const subtotal = cartState.total
   const savings = cartState.items.reduce(
     (sum, item) => sum + (item.originalPrice ? (item.originalPrice - item.price) * item.quantity : 0),
     0,
   )
+=======
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  const savings = cartItems.reduce((sum, item) => sum + (item.originalPrice - item.price) * item.quantity, 0)
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   const promoDiscount = appliedPromo ? subtotal * 0.1 : 0
   const shipping = subtotal > 100 ? 0 : 9.99
   const tax = (subtotal - promoDiscount) * 0.08
   const total = subtotal - promoDiscount + shipping + tax
 
+<<<<<<< HEAD
   if (cartState.items.length === 0) {
+=======
+  if (cartItems.length === 0) {
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -59,6 +124,7 @@ export default function CartPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Shopping Cart</h1>
+<<<<<<< HEAD
             <p className="text-gray-600">{cartState.items.length} items in your cart</p>
           </div>
           <div className="flex space-x-4">
@@ -72,12 +138,26 @@ export default function CartPage() {
               </Link>
             </Button>
           </div>
+=======
+            <p className="text-gray-600">{cartItems.length} items in your cart</p>
+          </div>
+          <Button asChild variant="outline">
+            <Link href="/products">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Continue Shopping
+            </Link>
+          </Button>
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
+<<<<<<< HEAD
             {cartState.items.map((item) => (
+=======
+            {cartItems.map((item) => (
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
               <Card key={item.id} className="overflow-hidden">
                 <CardContent className="p-6">
                   <div className="flex flex-col sm:flex-row gap-6">
@@ -107,10 +187,17 @@ export default function CartPage() {
                         </h3>
                         <div className="flex items-center space-x-3">
                           <span className="text-2xl font-bold text-gray-900">${item.price}</span>
+<<<<<<< HEAD
                           {item.originalPrice && item.originalPrice > item.price && (
                             <span className="text-lg text-gray-500 line-through">${item.originalPrice}</span>
                           )}
                           {item.originalPrice && item.originalPrice > item.price && (
+=======
+                          {item.originalPrice > item.price && (
+                            <span className="text-lg text-gray-500 line-through">${item.originalPrice}</span>
+                          )}
+                          {item.originalPrice > item.price && (
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                             <Badge className="bg-green-100 text-green-800">
                               Save ${(item.originalPrice - item.price).toFixed(2)}
                             </Badge>
@@ -150,7 +237,11 @@ export default function CartPage() {
                           <Button
                             variant="ghost"
                             size="sm"
+<<<<<<< HEAD
                             onClick={() => removeFromCart(item.id)}
+=======
+                            onClick={() => removeItem(item.id)}
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                             className="text-red-600 hover:text-red-700 hover:bg-red-50"
                           >
                             <Trash2 className="h-4 w-4" />
@@ -247,6 +338,7 @@ export default function CartPage() {
                 )}
 
                 <Button
+<<<<<<< HEAD
                   asChild
                   className="w-full mt-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-6 text-lg"
                   disabled={cartState.items.some((item) => !item.inStock)}
@@ -255,6 +347,13 @@ export default function CartPage() {
                     <CreditCard className="mr-2 h-5 w-5" />
                     Proceed to Checkout
                   </Link>
+=======
+                  className="w-full mt-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-6 text-lg"
+                  disabled={cartItems.some((item) => !item.inStock)}
+                >
+                  <CreditCard className="mr-2 h-5 w-5" />
+                  Proceed to Checkout
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                 </Button>
 
                 <div className="mt-4 text-center">

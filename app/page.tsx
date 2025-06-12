@@ -4,7 +4,11 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+<<<<<<< HEAD
 import { ArrowRight, Star, Truck, Shield, Headphones, ChevronLeft, ChevronRight } from "lucide-react"
+=======
+import { ArrowRight, Star, Truck, Shield, Headphones, Play, ChevronLeft, ChevronRight } from "lucide-react"
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
 import Image from "next/image"
 import Link from "next/link"
 import RecentlyViewed from "@/components/recently-viewed"
@@ -25,9 +29,15 @@ export default function HomePage() {
       name: "Premium Wireless Headphones",
       price: 299.99,
       originalPrice: 399.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1704440278730-b420f5892700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJlbWl1bSUyMHdpcmVsZXNzJTIwaGVhZHBob25lc3xlbnwwfHwwfHx8Mg%3D%3D",
       rating: 4.8,
       reviews: 0,
+=======
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.8,
+      reviews: 2847,
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       badge: "Best Seller",
     },
     {
@@ -35,9 +45,15 @@ export default function HomePage() {
       name: "Smart Fitness Watch",
       price: 249.99,
       originalPrice: 329.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1629339837617-7069ce9e7f6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBmaXRuZXNzJTIwd2F0Y2h8ZW58MHx8MHx8fDI%3D",
       rating: 4.9,
       reviews: 0,
+=======
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.9,
+      reviews: 1923,
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       badge: "New",
     },
     {
@@ -45,7 +61,11 @@ export default function HomePage() {
       name: "Professional Camera Lens",
       price: 899.99,
       originalPrice: 1199.99,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1565193079400-18f2482dd197?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwY2FtZXJhJTIwbGVuc3xlbnwwfHwwfHx8Mg%3D%3D",
+=======
+      image: "/placeholder.svg?height=400&width=400",
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       rating: 4.7,
       reviews: 856,
       badge: "Limited",
@@ -76,10 +96,41 @@ export default function HomePage() {
     },
   ]
 
+<<<<<<< HEAD
   // Animate statistics on mount
   useEffect(() => {
     const animateStats = () => {
       const targets = { customers: 0, products: 0, countries: 0, satisfaction: 0 }
+=======
+  const floatingProducts = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      price: "$299",
+      image: "/placeholder.svg?height=100&width=100",
+      position: "top-20 left-10",
+    },
+    {
+      id: 2,
+      name: "Smart Watch",
+      price: "$249",
+      image: "/placeholder.svg?height=100&width=100",
+      position: "top-40 right-20",
+    },
+    {
+      id: 3,
+      name: "Camera Lens",
+      price: "$899",
+      image: "/placeholder.svg?height=100&width=100",
+      position: "bottom-32 left-20",
+    },
+  ]
+
+  // Animate statistics on mount
+  useEffect(() => {
+    const animateStats = () => {
+      const targets = { customers: 50000, products: 200000, countries: 25, satisfaction: 98 }
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
       const duration = 2000
       const steps = 60
       const stepDuration = duration / steps
@@ -137,6 +188,33 @@ export default function HomePage() {
           ))}
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Floating Product Cards */}
+        {floatingProducts.map((product, index) => (
+          <div
+            key={product.id}
+            className={`absolute ${product.position} hidden lg:block animate-bounce floating-product-${index}`}
+          >
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-3 hover:scale-110 transition-transform duration-300">
+              <div className="flex items-center space-x-3">
+                <Image
+                  src={product.image || "/placeholder.svg"}
+                  alt={product.name}
+                  width={50}
+                  height={50}
+                  className="rounded-lg"
+                />
+                <div className="text-white">
+                  <p className="text-sm font-medium">{product.name}</p>
+                  <p className="text-xs text-purple-200">{product.price}</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        ))}
+
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-6xl mx-auto">
             {/* Main Content */}
@@ -193,6 +271,17 @@ export default function HomePage() {
               >
                 <Link href="#featured">View Featured</Link>
               </Button>
+<<<<<<< HEAD
+=======
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
+              >
+                <Play className="mr-2 h-5 w-5" />
+                Watch Story
+              </Button>
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
             </div>
 
             {/* Customer Testimonial Carousel */}

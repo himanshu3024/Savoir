@@ -9,14 +9,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Heart, Star, ShoppingCart, Trash2, Share2, Grid, List, Search } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+<<<<<<< HEAD
 import { useWishlist } from "@/contexts/wishlist-context"
 import { useCart } from "@/contexts/cart-context"
+=======
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
 
 export default function WishlistPage() {
   const [viewMode, setViewMode] = useState("grid")
   const [sortBy, setSortBy] = useState("newest")
   const [searchTerm, setSearchTerm] = useState("")
 
+<<<<<<< HEAD
   const { state: wishlistState, removeFromWishlist, clearWishlist } = useWishlist()
   const { addToCart } = useCart()
 
@@ -29,6 +33,75 @@ export default function WishlistPage() {
       image: item.image,
       inStock: item.inStock,
     })
+=======
+  // Mock wishlist data - in real app, this would come from state management/API
+  const [wishlistItems, setWishlistItems] = useState([
+    {
+      id: 1,
+      name: "Premium Wireless Headphones",
+      price: 299.99,
+      originalPrice: 399.99,
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.8,
+      reviews: 2847,
+      category: "Electronics",
+      badge: "Best Seller",
+      description: "High-quality wireless headphones with noise cancellation",
+      inStock: true,
+      addedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2), // 2 days ago
+    },
+    {
+      id: 3,
+      name: "Professional Camera Lens",
+      price: 899.99,
+      originalPrice: 1199.99,
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.7,
+      reviews: 856,
+      category: "Photography",
+      badge: "Limited",
+      description: "Professional-grade camera lens for stunning photography",
+      inStock: true,
+      addedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 5), // 5 days ago
+    },
+    {
+      id: 4,
+      name: "Luxury Leather Wallet",
+      price: 129.99,
+      originalPrice: 179.99,
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.6,
+      reviews: 1245,
+      category: "Accessories",
+      badge: "",
+      description: "Handcrafted leather wallet with RFID protection",
+      inStock: false,
+      addedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 7), // 7 days ago
+    },
+    {
+      id: 5,
+      name: "Ergonomic Office Chair",
+      price: 449.99,
+      originalPrice: 599.99,
+      image: "/placeholder.svg?height=400&width=400",
+      rating: 4.8,
+      reviews: 967,
+      category: "Furniture",
+      badge: "Popular",
+      description: "Ergonomic design for maximum comfort and productivity",
+      inStock: true,
+      addedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 10), // 10 days ago
+    },
+  ])
+
+  const removeFromWishlist = (productId: number) => {
+    setWishlistItems((items) => items.filter((item) => item.id !== productId))
+  }
+
+  const addToCart = (productId: number) => {
+    console.log(`Added product ${productId} to cart`)
+    // In real app, add to cart logic here
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
   }
 
   const shareProduct = (product: any) => {
@@ -44,7 +117,15 @@ export default function WishlistPage() {
     }
   }
 
+<<<<<<< HEAD
   const filteredItems = wishlistState.items
+=======
+  const clearWishlist = () => {
+    setWishlistItems([])
+  }
+
+  const filteredItems = wishlistItems
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     .filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
     .sort((a, b) => {
       switch (sortBy) {
@@ -72,13 +153,22 @@ export default function WishlistPage() {
     return `${diffInDays} days ago`
   }
 
+<<<<<<< HEAD
   const totalValue = wishlistState.items.reduce((sum, item) => sum + item.price, 0)
   const totalSavings = wishlistState.items.reduce(
+=======
+  const totalValue = wishlistItems.reduce((sum, item) => sum + item.price, 0)
+  const totalSavings = wishlistItems.reduce(
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     (sum, item) => sum + (item.originalPrice ? item.originalPrice - item.price : 0),
     0,
   )
 
+<<<<<<< HEAD
   if (wishlistState.items.length === 0) {
+=======
+  if (wishlistItems.length === 0) {
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
@@ -126,7 +216,11 @@ export default function WishlistPage() {
                 My Wishlist
               </h1>
               <p className="text-gray-600">
+<<<<<<< HEAD
                 {wishlistState.items.length} {wishlistState.items.length === 1 ? "item" : "items"} saved
+=======
+                {wishlistItems.length} {wishlistItems.length === 1 ? "item" : "items"} saved
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
               </p>
             </div>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
@@ -146,7 +240,11 @@ export default function WishlistPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <Card>
               <CardContent className="p-6 text-center">
+<<<<<<< HEAD
                 <div className="text-2xl font-bold text-gray-900 mb-2">{wishlistState.items.length}</div>
+=======
+                <div className="text-2xl font-bold text-gray-900 mb-2">{wishlistItems.length}</div>
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                 <div className="text-gray-600">Items Saved</div>
               </CardContent>
             </Card>
@@ -285,7 +383,11 @@ export default function WishlistPage() {
 
                   <div className="flex items-center justify-between space-x-2">
                     <Button
+<<<<<<< HEAD
                       onClick={() => addToCartFromWishlist(item)}
+=======
+                      onClick={() => addToCart(item.id)}
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                       disabled={!item.inStock}
                       className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
                     >
@@ -326,7 +428,11 @@ export default function WishlistPage() {
         )}
 
         {/* Quick Actions */}
+<<<<<<< HEAD
         {wishlistState.items.length > 0 && (
+=======
+        {wishlistItems.length > 0 && (
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
           <div className="mt-12 text-center">
             <Card className="p-8 bg-gradient-to-r from-purple-50 to-blue-50 border-purple-200">
               <h3 className="text-2xl font-bold mb-4">Ready to purchase?</h3>
@@ -338,11 +444,19 @@ export default function WishlistPage() {
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
                   onClick={() => {
+<<<<<<< HEAD
                     const inStockItems = wishlistState.items.filter((item) => item.inStock)
                     inStockItems.forEach((item) => addToCartFromWishlist(item))
                   }}
                 >
                   Add All to Cart ({wishlistState.items.filter((item) => item.inStock).length} items)
+=======
+                    const inStockItems = wishlistItems.filter((item) => item.inStock)
+                    inStockItems.forEach((item) => addToCart(item.id))
+                  }}
+                >
+                  Add All to Cart ({wishlistItems.filter((item) => item.inStock).length} items)
+>>>>>>> 28b0df6d36395144296a081afcac291179282bdd
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="/products">Continue Shopping</Link>
