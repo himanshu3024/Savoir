@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - AZURE_SQL_SERVER=${AZURE_SQL_SERVER}
+      - AZURE_SQL_DATABASE=${AZURE_SQL_DATABASE}
+      - AZURE_SQL_USERNAME=${AZURE_SQL_USERNAME}
+      - AZURE_SQL_PASSWORD=${AZURE_SQL_PASSWORD}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+    depends_on:
+      - redis
+    networks:
+      - savoir-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - savoir-network
+
+volumes:
+  redis_data:
+
+networks:
+  savoir-network:
+    driver: bridge
